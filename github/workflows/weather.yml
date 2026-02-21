@@ -1,0 +1,10 @@
+name: Daily Weather Bot
+on:
+  schedule:
+    - cron: '0 0 * * *' # 매일 아침 9시(한국 시간 기준)에 실행
+jobs:
+  get-weather:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Weather
+        run: curl wttr.in/Seoul # 서울 날씨를 가져와서 보여줘!
